@@ -2,14 +2,15 @@ var expect = require('chai').expect
 var { describe, it } = require('mocha')
 var deliverStormTroopersEscapeScene = require('./index')
 
-describe('StarWarsScene', function () {
-  it('returns shots and lines for Luke, Leia, and Han\'s escape scene', function () {
+describe('StarWarsScene', () => {
+  it('returns shots and lines for Luke, Leia, and Han\'s escape scene', () => {
     var rebels = [
       { name: 'Luke Skywalker', plotArmor: true },
       { name: 'Leia Organa', plotArmor: true },
       { name: 'Han Solo', plotArmor: true },
     ]
 
+    console.log(deliverStormTroopersEscapeScene(rebels))
     expect(deliverStormTroopersEscapeScene(rebels))
       .to.deep.equal([
         'Look! Rebel scum!',
@@ -25,7 +26,7 @@ describe('StarWarsScene', function () {
       ])
   })
 
-  it('returns only shots when the rebels include random extras', function () {
+  xit('returns only shots when the rebels include random extras', () => {
     var rebels = [
       { name: 'Chewbacca', plotArmor: true },
       { name: 'Some Rebel', plotArmor: false },
@@ -45,7 +46,7 @@ describe('StarWarsScene', function () {
       ])
   })
 
-  it('returns shots and lines for 3PO and Artoo\'s escape scene', function () {
+  xit('returns shots and lines for 3PO and Artoo\'s escape scene', () => {
     var rebels = [
       { name: 'R2D2', plotArmor: true },
       { name: 'C3PO', plotArmor: true },
@@ -64,7 +65,7 @@ describe('StarWarsScene', function () {
       ])
   })
 
-  it('returns shots at nothing when there are no rebels', function () {
+  xit('returns shots at nothing when there are no rebels', () => {
     var rebels = []
 
     expect(deliverStormTroopersEscapeScene(rebels))
