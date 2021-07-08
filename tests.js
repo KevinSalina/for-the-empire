@@ -28,7 +28,7 @@ describe('StarWarsScene', () => {
     expect(actualResult).to.deep.equal(expectedResult)
   })
 
-  it('returns only shots when the rebels include random extras', () => {
+  it('only returns "Oh No They\'re getting away!" when plotArmor is true', () => {
     const rebels = [
       { name: 'Chewbacca', plotArmor: true },
       { name: 'Some Rebel', plotArmor: false },
@@ -50,7 +50,7 @@ describe('StarWarsScene', () => {
     expect(actualResult).to.deep.equal(expectedResult)
   })
 
-  it('returns shots and lines for 3PO and Artoo\'s escape scene', () => {
+  it('returns shots and lines for C3PO and R2D2 escape scene', () => {
     const rebels = [
       { name: 'R2D2', plotArmor: true },
       { name: 'C3PO', plotArmor: true },
